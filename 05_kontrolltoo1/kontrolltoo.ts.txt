@@ -1,0 +1,25 @@
+class Auto {
+    kaugusAlgusest: number;
+    liikumisKiirus: number;
+
+    constructor(kaugusAlgusest: number, liikumisKiirus: number) {
+        this.kaugusAlgusest = kaugusAlgusest;
+        this.liikumisKiirus = liikumisKiirus;
+    }
+}
+
+
+const auto1 = new Auto(0, 80); 
+const auto2 = new Auto(10, 100); 
+
+console.log("Auto 1 andmed:");
+
+console.log("Auto kaugus maantee algusest: ", auto1.kaugusAlgusest, " km");
+console.log("Auto liikumisKiirus: ", auto1.liikumisKiirus, " km/h");
+
+console.log("");
+
+console.log("Auto 2 andmed:");
+
+console.log("Auto kaugus maantee algusest: ", auto2.kaugusAlgusest," km");
+console.log("Auto liikumisKiirus: ", auto2.liikumisKiirus," km/h");

@@ -1,0 +1,32 @@
+class Auto {
+    kaugusAlgusest: number;
+    liikumisKiirus: number;
+
+    constructor(kaugusAlgusest: number, liikumisKiirus: number) {
+        this.kaugusAlgusest = kaugusAlgusest;
+        this.liikumisKiirus = liikumisKiirus;
+    }
+
+    maaraAsukohad(aeg: number): number {
+        return this.kaugusAlgusest + this.liikumisKiirus * (aeg / 3600);
+    }
+}
+
+const auto1 = new Auto(0, 80); 
+const auto2 = new Auto(10, 100);
+
+console.log("Auto 1 andmed:");
+console.log("Auto kaugus maantee algusest: ", auto1.kaugusAlgusest, " km");
+console.log("Auto liikumisKiirus: ", auto1.liikumisKiirus, " km/h");
+console.log("Auto 1 kaugus 3 sekundi pärast:", auto1.maaraAsukohad(3), "km");
+console.log("Auto 1 kaugus 5 minuti pärast:", auto1.maaraAsukohad(5 * 60), "km");
+console.log("Auto 1 kaugus 2 tunni pärast:", auto1.maaraAsukohad(2 * 3600), "km");
+
+console.log("")
+
+console.log("Auto 2 andmed:");
+console.log("Auto kaugus maantee algusest: ", auto2.kaugusAlgusest," km");
+console.log("Auto liikumisKiirus: ", auto2.liikumisKiirus," km/h");
+console.log("Auto 2 kaugus 3 sekundi pärast:", auto2.maaraAsukohad(3), "km");
+console.log("Auto 2 kaugus 5 minuti pärast:", auto2.maaraAsukohad(5 * 60), "km");
+console.log("Auto 2 kaugus 2 tunni pärast:", auto2.maaraAsukohad(2 * 3600), "km");
