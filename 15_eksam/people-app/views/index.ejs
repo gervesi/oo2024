@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Elle konto lisatud inimesed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lisatud inimesed</h1>
+    <% if (people.length === 0) { %>
+        <p>Veel inimesi pole</p>
+    <% } else { %>
+        <ul>
+            <% people.forEach(person => { %>
+                <li>
+                    <%= person.name %> (Isikukood: <%= person.personal_code %>)
+                    <form action="/delete/<%= person.id %>" method="POST" style="display:inline;">
+                        <button type="submit">Kustuta</button>
+                    </form>
+                    <a href="/texts/<%= person.personal_code %>">Tekstid</a>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+    <a href="/add">Lisa inimene</a>
+</body>
+</html>

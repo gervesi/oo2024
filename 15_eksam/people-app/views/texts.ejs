@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Inimese Tekstid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Inimese Tekstid</h1>
+    <% if (texts.length === 0) { %>
+        <p>Tekste ei leitud.</p>
+    <% } else { %>
+        <ul>
+            <% texts.forEach(text => { %>
+                <li><%= text.text %></li>
+            <% }); %>
+        </ul>
+    <% } %>
+    <a href="/">Tagasi</a>
+</body>
+</html>
